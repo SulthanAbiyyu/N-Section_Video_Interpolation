@@ -34,3 +34,5 @@ def images_to_video(path, output_path, video_name):
         video.write(frame)
     cv2.destroyAllWindows()
     video.release()
+
+# TODO: add flush image output function
