@@ -1,4 +1,4 @@
 status: development
 tests:
-  video: /data/videos/
-  image: /data/images/
+  video: ./data/videos/
+  image: ./data/images/
