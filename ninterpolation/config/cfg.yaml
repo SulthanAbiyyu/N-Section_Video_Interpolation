@@ -5,4 +5,3 @@ tests:
 output:
   image: ./output_images
   video: ./output_video
-  final: ./final

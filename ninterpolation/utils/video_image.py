@@ -12,7 +12,6 @@ def video_to_images(path, output_path):
 
     while isTrue:
         cv2.imwrite(f'{output_path}/{frame_count}.jpg', frame)
-        print(f'{frame_count}.jpg')
         isTrue, frame = video.read()
         frame_count += 1
 
@@ -35,4 +34,10 @@ def images_to_video(path, output_path, video_name):
     cv2.destroyAllWindows()
     video.release()
 
-# TODO: add flush image output function
+
+def flush_image_folder(image_folder):
+    for file in os.listdir(image_folder):
+        os.remove(os.path.join(image_folder, file))
+    os.rmdir(image_folder)
+    print("Flushed image folder")
+    return True
