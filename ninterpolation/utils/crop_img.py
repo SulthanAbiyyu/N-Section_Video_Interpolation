@@ -2,7 +2,6 @@ import cv2
 
 
 def crop(img, height, width):
-    print("Shape of the image", img.shape)
 
     height_lower_bound = int((img.shape[0]-height)/2)
     height_upper_bound = int(img.shape[0]-((img.shape[0]-height)/2))

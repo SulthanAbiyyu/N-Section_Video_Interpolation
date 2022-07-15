@@ -18,20 +18,15 @@ def video_to_images(path, output_path):
     return fps
 
 
-def images_to_video(path, output_path, video_name, fps):
+def images_to_video(frames, output_path, video_name, fps):
 
     if not os.path.exists(output_path):
         os.makedirs(output_path)
 
-    images = [img for img in os.listdir(path) if img.endswith(".jpg")]
-    images.sort(key=lambda x: int(x.split('.')[0]))
-    frames = [cv2.imread(os.path.join(path, img)) for img in images]
-
-    height, width, layers = frames[0].shape
+    height, width, _ = frames[0].shape
     video = cv2.VideoWriter(
         f"{output_path}/{video_name}", fourcc=cv2.VideoWriter_fourcc(*"mp4v"), fps=fps, frameSize=(width, height))
-    for image, frame in zip(images, frames):
-        print(image)
+    for frame in frames:
         video.write(frame)
     cv2.destroyAllWindows()
     video.release()
