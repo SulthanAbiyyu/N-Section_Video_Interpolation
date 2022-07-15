@@ -2,3 +2,7 @@ status: development
 tests:
   video: ./data/videos/
   image: ./data/images/
+output:
+  image: ./output_images
+  video: ./output_video
+  final: ./final

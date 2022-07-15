@@ -6,3 +6,4 @@ output_images
 output_video
 test.mp4
 data
+ninterpolation/utils/__pycache__/
