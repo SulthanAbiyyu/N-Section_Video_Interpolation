@@ -1,7 +1,7 @@
 import yaml
 
 
-def load_config(config_file="ninterpolation/config/cfg.yaml"):
+def load_config(config_file="./ninterpolation/config/cfg.yaml"):
     with open(config_file, 'r') as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
     return config
