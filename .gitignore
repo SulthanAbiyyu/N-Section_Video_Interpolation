@@ -3,6 +3,7 @@ output_images
 output_video
 test.mp4
 data
+temp_img
 
-.pyc
-.pyo
+*.pyc
+*.pyo
